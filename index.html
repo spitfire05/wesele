@@ -153,25 +153,25 @@
     <header class="relative text-center overflow-hidden">
         <!-- Background image – change the URL to your own photo -->
         <div class="absolute inset-0 z-0">
-            <img src="bg.jpg" alt="Tło ślubu" class="w-full h-full object-cover object-center">
+            <img src="img/bg.png" alt="Tło ślubu" class="w-full h-full object-cover object-center">
             <!-- Dark overlay so text remains readable -->
             <div class="absolute inset-0 bg-black/30"></div>
         </div>
 
         <!-- Header content (on top of the image) -->
         <div class="relative z-10 flex items-center justify-center px-6">
-            <img src="header.svg" alt="Małwina & Michał – 26 czerwca 2026 – Ślub w Osadzie Dębowo"
+            <img src="img/header.svg" alt="Małwina & Michał – 26 czerwca 2026 – Ślub w Osadzie Dębowo"
                 class="w-full max-w-3xl drop-shadow-2xl invert">
             <!-- object-contain makes sure your SVG is never distorted -->
             <!-- max-w-5xl keeps it the same width as the rest of your content -->
         </div>
     </header>
 
-    <div class="container mx-auto px-4 py-8 relative z-10">
+    <div class="mx-auto w-full py-8 relative z-10">
         <!-- Main Content -->
         <main class="space-y-12">
             <!-- Ceremony Details -->
-            <section class="bg-invitation-beige/90 rounded-lg p-8">
+            <section class="bg-invitation-beige/90 p-8">
                 <h2 class="text-3xl tracking-widest text-invitation-gold mb-6 text-center">CEREMONIA</h2>
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
@@ -187,30 +187,46 @@
             </section>
 
             <!-- Schedule -->
-            <section class="bg-invitation-beige/90 rounded-lg p-8">
-                <h2 class="text-3xl tracking-widest text-invitation-gold mb-6 text-center">HARMONOGRAM DNIA</h2>
-                <ul class="space-y-4">
-                    <li class="flex justify-between p-4 bg-invitation-beige/50 rounded-lg">
-                        <span>15:30</span>
-                        <span>Powitanie gości</span>
-                    </li>
-                    <li class="flex justify-between p-4 bg-invitation-beige/50 rounded-lg">
-                        <span>16:00</span>
-                        <span>Ceremonia zaślubin</span>
-                    </li>
-                    <li class="flex justify-between p-4 bg-invitation-beige/50 rounded-lg">
-                        <span>17:30</span>
-                        <span>Koktajl i zdjęcia</span>
-                    </li>
-                    <li class="flex justify-between p-4 bg-invitation-beige/50 rounded-lg">
-                        <span>19:00</span>
-                        <span>Wesele i uczta</span>
-                    </li>
-                </ul>
+            <section class="bg-invitation-green p-0">
+                <div class="flex flex-col md:flex-row gap-0">
+                    <div class="w-full md:w-1/2 bg-cover bg-bottom relative" style="background-image: url('img/bg2.jiff');">
+
+                        <!-- Dark overlay so gold text pops -->
+                        <div class="absolute inset-0 bg-black/40"></div>
+
+                        <!-- Title centered on the photo -->
+                        <div class="relative z-10 flex items-center justify-center h-full p-8">
+                            <h2 class="text-3xl tracking-widest text-invitation-gold text-center drop-shadow-2xl">
+                                HARMONOGRAM DNIA
+                            </h2>
+                        </div>
+                    </div>
+
+                    <div class="w-full md:w-1/2 p-8">
+                        <ul class="space-y-4">
+                            <li class="flex justify-between p-4 bg-invitation-beige/50 rounded-lg">
+                                <span>15:30</span>
+                                <span>Powitanie gości</span>
+                            </li>
+                            <li class="flex justify-between p-4 bg-invitation-beige/50 rounded-lg">
+                                <span>16:00</span>
+                                <span>Ceremonia zaślubin</span>
+                            </li>
+                            <li class="flex justify-between p-4 bg-invitation-beige/50 rounded-lg">
+                                <span>17:30</span>
+                                <span>Koktajl i zdjęcia</span>
+                            </li>
+                            <li class="flex justify-between p-4 bg-invitation-beige/50 rounded-lg">
+                                <span>19:00</span>
+                                <span>Wesele i uczta</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </section>
 
             <!-- Location with Map -->
-            <section class="bg-invitation-beige/90 rounded-lg p-8">
+            <section class="bg-invitation-beige rounded-lg p-8">
                 <h2 class="text-3xl tracking-widest text-invitation-gold mb-6 text-center">MIEJSCE</h2>
                 <p class="text-center mb-6">Osada Dębowo, Jeziorany, Polska</p>
                 <!-- Google Maps Embed for Osada Dębowo -->
@@ -223,7 +239,7 @@
             </section>
 
             <!-- Practical Info -->
-            <section class="bg-invitation-beige/90 rounded-lg p-8">
+            <section class="bg-invitation-green rounded-lg p-8">
                 <h2 class="text-3xl tracking-widest text-invitation-gold mb-6 text-center">INFORMACJE PRAKTYCZNE</h2>
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
