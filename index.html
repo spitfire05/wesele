@@ -188,7 +188,7 @@
             <!-- Schedule -->
             <section class="bg-invitation-green p-0">
                 <div class="flex flex-col md:flex-row gap-0">
-                    <div class="w-full md:w-1/2 bg-cover bg-bottom relative" style="background-image: url('img/bg2.jpg');">
+                    <div class="w-full md:w-1/2 bg-cover bg-bottom relative bg-[url(img/bg2.jpg)]">
 
                         <!-- Dark overlay so gold text pops -->
                         <div class="absolute inset-0 bg-black/40"></div>
@@ -238,24 +238,32 @@
             </section>
 
             <!-- Practical Info -->
-            <section class="bg-invitation-green rounded-lg p-8">
-                <h2 class="text-3xl tracking-widest text-invitation-gold mb-6 text-center">INFORMACJE PRAKTYCZNE</h2>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div>
-                        <h3 class="font-semibold mb-2 text-invitation-pink">Ubiór</h3>
-                        <p>Swobodny, ale elegancki. Kolory natury mile widziane – róże, zielenie, złota.</p>
+            <section class="bg-invitation-green p-0">
+                <div class="flex flex-col md:flex-row gap-0">
+                    <div class="w-full md:w-1/2 bg-cover bg-center relative bg-[url(img/bg2.jpg)]">
+
+                        <!-- Dark overlay so gold text pops -->
+                        <div class="absolute inset-0 bg-black/60"></div>
+
+                        <!-- Title centered on the photo -->
+                        <div class="relative z-10 flex items-center justify-center h-full p-8">
+                            <h2 class="text-3xl tracking-widest text-invitation-gold text-center drop-shadow-2xl">
+                                INFORMACJE PRAKTYCZNE
+                            </h2>
+                        </div>
                     </div>
-                    <div>
-                        <h3 class="font-semibold mb-2 text-invitation-green">Pogoda</h3>
-                        <p>Lato w Polsce bywa ciepłe i słoneczne. Przygotujcie krem z filtrem i lekkie okrycie.</p>
-                    </div>
-                    <div>
-                        <h3 class="font-semibold mb-2 text-invitation-gold">Zakwaterowanie</h3>
-                        <p>Polecamy noclegi w Osadzie Dębowo lub pobliskich agroturystykach. Rezerwujcie wcześnie!</p>
-                    </div>
-                    <div>
-                        <h3 class="font-semibold mb-2 text-invitation-pink">Dla Dzieci</h3>
-                        <p>Dzieci witamy! Dostępna strefa zabaw na świeżym powietrzu.</p>
+
+                    <div class="w-full md:w-1/2 p-8">
+                        <ul class="space-y-4">
+                            <li class="flex justify-between p-4 bg-invitation-beige/50 rounded-lg">
+                                <span class="text-invitation-gold font-bold">Ubiór</span>
+                                <span>Swobodny</span>
+                            </li>
+                            <li class="flex justify-between p-4 bg-invitation-beige/50 rounded-lg">
+                                <span class="text-invitation-gold font-bold">Pogoda</span>
+                                <span>Słoneczna</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </section>
