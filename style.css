@@ -7,6 +7,7 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
+  max-width: 100%;
   font-family: "Forum", serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -19,6 +20,8 @@ html {
   height: 100vh;
   max-height: 100vh;
   overflow-y: scroll;                /* enable vertical scrolling inside */
+  overflow-x: hidden;                /* together with max-widht: 100% this disables horizontal scroll for good,
+                                        very annoying on mobile w/o it */
   scroll-snap-type: y proximity;
   -webkit-overflow-scrolling: touch; /* smooth momentum on iOS */
 }
