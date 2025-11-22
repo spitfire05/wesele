@@ -17,8 +17,9 @@ html {
 /* The scrolling container */
 .container {
   height: 100vh;
+  max-height: 100vh;
   overflow-y: scroll;                /* enable vertical scrolling inside */
-  scroll-snap-type: y mandatory;     /* ← THE MAGIC LINE */
+  scroll-snap-type: y proximity;
   -webkit-overflow-scrolling: touch; /* smooth momentum on iOS */
 }
 
@@ -93,6 +94,7 @@ p {
 .big-img-h {
   width: 75vw;
   height: auto;
+  max-height: 50vh;
 }
 
 .harmonogram-img {
@@ -197,6 +199,10 @@ p {
 
   .img {
     max-width: 110vw;
+  }
+
+  .big-img-h {
+    width: 99vw;
   }
 
   #countdown span {
