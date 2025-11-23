@@ -8,6 +8,8 @@ html {
   padding: 0;
   height: 100%;
   max-width: 100%;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   font-family: "Forum", serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -188,9 +190,13 @@ p {
 }
 
 @media (max-width: 768px) {
-  /* .two {
+  .two {
     font-size: 1rem;
-  } */
+  }
+
+  .center-wrapper {
+    margin: 0rem;
+  }
 
   .line1 {
     font-size: 6vw;
@@ -206,6 +212,10 @@ p {
 
   .big-img-h {
     width: 99vw;
+  }
+
+  #countdown {
+    gap: 1rem;
   }
 
   #countdown span {
