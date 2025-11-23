@@ -12,8 +12,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
 
   <script>
-// SET YOUR TARGET DATE HERE
-// Format: new Date("Month Day, Year HH:MM:SS")  – use 24-hour format
 const targetDate = new Date("2026-05-02T17:00:00+02:00").getTime();
 
 const countdown = setInterval(() => {
@@ -23,8 +21,7 @@ const countdown = setInterval(() => {
   // If countdown is finished
   if (distance <= 0) {
     clearInterval(countdown);
-    document.getElementById("countdown").style.display = "none";
-    document.getElementById("finished").style.display = "block";
+    document.getElementById("countdown-container").style.display = "none";
     return;
   }
 
@@ -40,6 +37,8 @@ const countdown = setInterval(() => {
   document.getElementById("minutes").textContent = minutes.toString().padStart(2, "0");
   document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
 
+  document.getElementById("countdown-container").style.display = "block";
+
 }, 1000); // update every second
 </script>
 </head>
@@ -48,9 +47,9 @@ const countdown = setInterval(() => {
   <div class="container">
     <section class="page one">
         <div class="center-wrapper">
-            <img src="img/header.svg" class="img big-img-h" />
+            <img src="img/header.svg" class="img big-img-h" />:W
         </div>
-        <div class="countdown-container bottom-element">
+        <div id="countdown-container" class="bottom-element">
             <div id="countdown">
             <div><span id="days">00</span><small>Dni</small></div>
             <span>:</span>
@@ -60,9 +59,6 @@ const countdown = setInterval(() => {
             <span>:</span>
             <div><span id="seconds">00</span><small>Sekund</small></div>
             </div>
-            <h1 id="finished" style="display:none;">
-                Wesele się rozpoczęło!
-            </h1>
         </div>
     </section>
 

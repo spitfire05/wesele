@@ -193,10 +193,11 @@ p {
   background: rgba(0, 0, 0, 0.4);
 }
 
-.countdown-container {
+#countdown-container {
   text-align: center;
   background: #b2b99e7e;
   min-width: 100vw;
+  display: none;
 }
 
 #countdown {
