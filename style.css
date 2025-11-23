@@ -151,6 +151,7 @@ p {
 .bottom-element {
   margin-top: auto;
   padding-bottom: 2rem;
+  margin-bottom: -2rem;             /* Corresponding to .page padding */
 }
 
 .bg-dark-40 {
