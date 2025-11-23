@@ -111,7 +111,7 @@ p {
 }
 
 .harmonogram {
-  max-height: 70dvh;
+  height: 70dvh;
   margin-top: -2rem;
 }
 
@@ -132,6 +132,10 @@ p {
   align-items: center;
   gap: 1.5rem;                     /* space between the two lines */
   padding: 2rem;
+}
+
+.three .title-wrapper {
+  max-height: 30dvh;
 }
 
 .four .title-wrapper {
