@@ -17,8 +17,8 @@ html {
 
 /* The scrolling container */
 .container {
-  height: 100vh;
-  max-height: 100vh;
+  height: 100dvh;
+  max-height: 100dvh;
   overflow-y: scroll;                /* enable vertical scrolling inside */
   overflow-x: hidden;                /* together with max-widht: 100% this disables horizontal scroll for good,
                                         very annoying on mobile w/o it */
@@ -28,9 +28,7 @@ html {
 
 /* Each full-screen section */
 .page {
-  /* height: 100vh;
-  width: 100vw; */
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -97,15 +95,15 @@ p {
 .big-img-h {
   width: 75vw;
   height: auto;
-  max-height: 50vh;
+  max-height: 50dvh;
 }
 
 .harmonogram-img {
   flex: 1;
   width: 90vmin;
   height: auto;
-  max-width: 90vh;
-  max-height: 70vh;
+  max-width: 90dvh;
+  max-height: 70dvh;
   margin-bottom: 40rem;
 }
 
@@ -188,9 +186,9 @@ p {
 }
 
 @media (max-width: 768px) {
-  /* .two {
-    font-size: 1rem;
-  } */
+  .two {
+    font-size: 0.8rem;
+  }
 
   .line1 {
     font-size: 6vw;
@@ -206,6 +204,10 @@ p {
 
   .big-img-h {
     width: 99vw;
+  }
+
+  #countdown {
+    gap: 1rem;
   }
 
   #countdown span {
