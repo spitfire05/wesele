@@ -63,15 +63,6 @@ p {
   opacity: 0.9;
 }
 
-.four p {
-  text-align: left;
-  margin-left: auto;
-  margin-right: 2rem;
-  max-width: 75vw;
-  font-size: 1.1rem;
-  margin-top: 1rem;
-}
-
 /* Optional: hide scrollbar but keep functionality */
 .container::-webkit-scrollbar {
   display: none;
@@ -115,6 +106,14 @@ p {
   margin-top: -2rem;
 }
 
+.chapter {
+  text-align: left;
+  margin-left: auto;
+  margin-right: 2rem;
+  max-width: 75vw;
+  font-size: 1.1rem;
+}
+
 .center-wrapper {
   flex: 1;                     /* takes all available space */
   display: flex;
@@ -146,6 +145,11 @@ p {
   text-align: left;
   padding-bottom: 0;
   margin-bottom: 0;
+  padding-top: 0;
+}
+
+.four .top-element {
+  padding-top: 0;
 }
 
 .four .wrapper {
