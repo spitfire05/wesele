@@ -18,9 +18,7 @@ html {
 /* The scrolling container */
 .container {
   height: 100vh;
-  height: -webkit-fill-available;
   max-height: 100vh;
-  max-height: -webkit-fill-available;
   overflow-y: scroll;                /* enable vertical scrolling inside */
   overflow-x: hidden;                /* together with max-widht: 100% this disables horizontal scroll for good,
                                         very annoying on mobile w/o it */
@@ -190,13 +188,9 @@ p {
 }
 
 @media (max-width: 768px) {
-  .two {
+  /* .two {
     font-size: 1rem;
-  }
-
-  .center-wrapper {
-    margin: 0rem;
-  }
+  } */
 
   .line1 {
     font-size: 6vw;
@@ -212,10 +206,6 @@ p {
 
   .big-img-h {
     width: 99vw;
-  }
-
-  #countdown {
-    gap: 1rem;
   }
 
   #countdown span {
