@@ -48,7 +48,10 @@ html {
  }
 .three { 
   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/bg2.jpg') center/cover no-repeat}
-.four  { background: #9b59b6; }
+.four  {
+  background: #f8f6f6;
+  font-size: clamp(1rem, 0.5556rem + 1.7778vw, 5rem);
+}
 
 h1 {
   font-size: 4rem;
@@ -58,6 +61,15 @@ h1 {
 p {
   font-size: 1.5rem;
   opacity: 0.9;
+}
+
+.four p {
+  text-align: left;
+  margin-left: auto;
+  margin-right: 2rem;
+  max-width: 75vw;
+  font-size: 1.1rem;
+  margin-top: 1rem;
 }
 
 /* Optional: hide scrollbar but keep functionality */
@@ -122,12 +134,35 @@ p {
   padding: 2rem;
 }
 
+.four .title-wrapper {
+  margin-left: 0;
+  margin-right: auto;
+  align-items: flex-start;
+  padding-left: 2vw;
+  text-align: left;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.four .wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  min-width: 100vw;
+}
+
 .line1 {
   font-size: clamp(3rem, 2.7778rem + 0.8889vw, 5rem);
   letter-spacing: 0.15em;
   text-transform: uppercase;
   margin: 0;
   transform: translateX(-20%);
+}
+
+.four .line1 {
+  transform: translateX(0);
 }
 
 .line2 {
@@ -137,6 +172,10 @@ p {
   font-weight: 400;
   margin-top: -2rem;
   transform: translateX(20%);
+}
+
+.four .line2 {
+  transform: translateX(50%);
 }
 
 .top-element {
@@ -186,6 +225,11 @@ p {
   .two {
     font-size: 0.8rem;
   }
+
+  .four p {
+    font-size: 0.8rem;
+  }
+
 
   .center-wrapper {
     margin-top: -2rem;
