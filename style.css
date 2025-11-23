@@ -20,6 +20,7 @@ html {
   height: 100vh;
   height: -webkit-fill-available;
   max-height: 100vh;
+  max-height: -webkit-fill-available;
   overflow-y: scroll;                /* enable vertical scrolling inside */
   overflow-x: hidden;                /* together with max-widht: 100% this disables horizontal scroll for good,
                                         very annoying on mobile w/o it */
