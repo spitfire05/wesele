@@ -8,8 +8,6 @@ html {
   padding: 0;
   height: 100%;
   max-width: 100%;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
   font-family: "Forum", serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -20,6 +18,7 @@ html {
 /* The scrolling container */
 .container {
   height: 100vh;
+  height: -webkit-fill-available;
   max-height: 100vh;
   overflow-y: scroll;                /* enable vertical scrolling inside */
   overflow-x: hidden;                /* together with max-widht: 100% this disables horizontal scroll for good,
