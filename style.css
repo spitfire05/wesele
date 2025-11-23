@@ -22,7 +22,7 @@ html {
   overflow-y: scroll;                /* enable vertical scrolling inside */
   overflow-x: hidden;                /* together with max-widht: 100% this disables horizontal scroll for good,
                                         very annoying on mobile w/o it */
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
   -webkit-overflow-scrolling: touch; /* smooth momentum on iOS */
 }
 
