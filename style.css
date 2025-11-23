@@ -47,7 +47,7 @@ html {
   font-size: clamp(1rem, 0.5556rem + 1.7778vw, 5rem);
  }
 .three { 
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('img/bg2.jpg') center/cover no-repeat}
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/bg2.jpg') center/cover no-repeat}
 .four  { background: #9b59b6; }
 
 h1 {
@@ -98,13 +98,9 @@ p {
   max-height: 75dvh;
 }
 
-.harmonogram-img {
-  flex: 1;
-  width: 90vmin;
-  height: auto;
-  max-width: 90dvh;
+.harmonogram {
   max-height: 70dvh;
-  margin-bottom: 40rem;
+  margin-top: -2rem;
 }
 
 .center-wrapper {
