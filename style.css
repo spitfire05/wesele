@@ -92,7 +92,7 @@ p {
 }
 
 .big-img-h {
-  width: 75vw;
+  width: 50vw;
   height: auto;
   max-height: 75dvh;
 }
@@ -104,7 +104,7 @@ p {
 
 .chapter {
   text-align: center;
-  max-width: 75vw;
+  max-width: 50vw;
   font-size: 1.1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -114,7 +114,6 @@ p {
   text-align: left;
   margin-left: 1rem;
   margin-right: auto;
-  max-width: 50vw;
 }
 
 .seven .title-wrapper {
@@ -298,8 +297,16 @@ p {
     font-size: 0.8rem;
   }
 
+  .chapter {
+    max-width: 90vw;
+  }
+
   .five .chapter {
     max-width: 50vw;
+  }
+
+  .seven .chapter {
+    max-width: 75vw;
   }
 
   .five p {
@@ -312,10 +319,6 @@ p {
 
   .seven p {
     font-size: 0.8rem;
-  }
-
-  .seven .chapter {
-    max-width: 75vw;
   }
 
   .five .frame-img,
