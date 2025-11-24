@@ -53,7 +53,7 @@ html {
   font-size: clamp(1rem, 0.5556rem + 1.7778vw, 5rem);
 }
 .five {
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/bg.jpg') center/cover no-repeat
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/bg-door.jpg') center/cover no-repeat
 }
 
 h1 {
@@ -119,9 +119,18 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: start;
+  align-items: center;
   min-width: 100vw;
 
+}
+
+.wrapper-v {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-width: 100vw;
 }
 
 .five .chapter {
@@ -134,8 +143,13 @@ p {
   font-size: 3rem;
 }
 
-.five .frame-img {
-  max-width: 30vw;
+.five .frame-img,
+.five .envelope-img {
+  width: 400px;
+}
+
+.five .envelope-img {
+  margin-top: 2rem;
 }
 
 .chapter > p {
@@ -178,15 +192,6 @@ p {
 
 .four .top-element {
   padding-top: 0;
-}
-
-.wrapper-v {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: start;
-  min-width: 100vw;
 }
 
 .line1 {
@@ -267,6 +272,18 @@ p {
     font-size: 0.8rem;
   }
 
+  .five .chapter {
+    max-width: 50vw;
+  }
+
+  .five p {
+    font-size: 1.5rem;
+  }
+
+  .five .frame-img,
+  .five .envelope-img {
+    width: 120px;
+  }
 
   .center-wrapper {
     margin-top: -2rem;
