@@ -108,20 +108,15 @@ p {
 }
 
 .chapter {
-  text-align: left;
-  margin-left: auto;
-  margin-right: 2rem;
+  text-align: center;
   max-width: 75vw;
   font-size: 1.1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-.six .chapter {
-  max-width: 50vw;
-}
-
 .seven .chapter {
+  text-align: left;
   margin-left: 1rem;
   margin-right: auto;
   max-width: 50vw;
@@ -214,8 +209,6 @@ p {
 }
 
 .four .title-wrapper {
-  margin-left: 0;
-  margin-right: auto;
   align-items: flex-start;
   padding-left: 2vw;
   text-align: left;
