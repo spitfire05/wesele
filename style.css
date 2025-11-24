@@ -13,6 +13,7 @@ html {
   font-style: normal;
   overflow: hidden;                  /* disable normal page scroll */
   letter-spacing: 0.15em;
+  background: #f8f6f6;
 }
 
 /* The scrolling container */
@@ -43,13 +44,11 @@ html {
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/bg-fairy.jpg') center/cover no-repeat
 }
 .two   { 
-  background: #f8f6f6;
   font-size: clamp(1rem, 0.5556rem + 1.7778vw, 5rem);
  }
 .three { 
   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/bg2.jpg') center/cover no-repeat}
 .four  {
-  background: #f8f6f6;
   font-size: clamp(1rem, 0.5556rem + 1.7778vw, 5rem);
 }
 
