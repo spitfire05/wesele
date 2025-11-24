@@ -154,11 +154,11 @@ p {
 
 .five .frame-img,
 .five .envelope-img {
-  width: 400px;
+  width: 350px;
 }
 
-.five .envelope-img {
-  margin-top: 2rem;
+.five .frame-img {
+  margin-bottom: 2rem;
 }
 
 .box-shadow {
