@@ -152,6 +152,12 @@ p {
   margin-top: 2rem;
 }
 
+.box-shadow {
+  -webkit-box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 1);
+  box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 1);
+}
+
 .chapter > p {
   margin: 0.5rem;
 }
@@ -315,5 +321,11 @@ p {
 
   #countdown small {
     font-size: 0.5rem;
+  }
+}
+
+@media (min-width: 2000px) {
+  .five p {
+    font-size: 4rem;
   }
 }
