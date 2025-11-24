@@ -114,6 +114,10 @@ p {
   margin-bottom: 1rem;
 }
 
+.six .chapter {
+  max-width: 50vw;
+}
+
 .wrapper-h {
   flex: 1;
   display: flex;
@@ -129,7 +133,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   min-width: 100vw;
 }
 
@@ -137,6 +141,11 @@ p {
   margin-left: 1rem;
   margin-right: auto;
   max-width: 40vw;
+}
+
+.gmap {
+  max-width: 95vw;
+  max-height: 50dvh;
 }
 
 .five p {
@@ -284,6 +293,10 @@ p {
 
   .five p {
     font-size: 1.5rem;
+  }
+
+  .six p {
+    font-size: 0.8rem;
   }
 
   .five .frame-img,
