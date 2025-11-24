@@ -1,170 +1,164 @@
 <!DOCTYPE html>
-<html lang="pl">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ślub Malwina & Michał</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        invitation: {
-                            pink: '#8500E1', // Soft pink for flowers
-                            green: '#B2B99E', // Soft ivy green
-                            gold: '#A88F4A', // Warm gold for text
-                            beige: '#FFFDF7', // Cream beige background
-                            forest: '#89957E', // Deeper forest green
-                        }
-                    },
-                    fontFamily: {
-                        'whimsy': ['Parisienne', 'serif'],
-                        'serif': ['"EB Garamond"', 'serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@300;400;600&display=swap"
-        rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malwina i Michał</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Fleur+De+Leah&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+
+  <script>
+const targetDate = new Date("2026-05-02T17:00:00+02:00").getTime();
+
+const countdown = setInterval(() => {
+  const now = new Date().getTime();
+  const distance = targetDate - now;
+
+  // If countdown is finished
+  if (distance <= 0) {
+    clearInterval(countdown);
+    document.getElementById("countdown-container").style.display = "none";
+    return;
+  }
+
+  // Calculations
+  const days    = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours   = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Update DOM
+  document.getElementById("days").textContent    = days.toString().padStart(2, "0");
+  document.getElementById("hours").textContent   = hours.toString().padStart(2, "0");
+  document.getElementById("minutes").textContent = minutes.toString().padStart(2, "0");
+  document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
+
+  document.getElementById("countdown-container").style.display = "block";
+
+}, 1000); // update every second
+</script>
 </head>
+<body>
 
-<body class="min-h-screen font-serif text-[#6B5A3C] relative overflow-x-hidden tracking-widest bg-invitation-beige">
-
-    <!-- Header with full-width background image -->
-    <header class="relative text-center overflow-hidden">
-        <!-- Background image – change the URL to your own photo -->
-        <div class="absolute inset-0 z-0">
-            <img src="img/bg.jpg" alt="Tło ślubu" class="w-full h-full object-cover object-center">
-            <!-- Dark overlay so text remains readable -->
-            <div class="absolute inset-0 bg-black/30"></div>
+  <div class="container">
+    <section class="page one">
+        <div class="center-wrapper">
+            <img src="img/header.svg" class="img big-img-h" />
         </div>
-
-        <!-- Header content (on top of the image) -->
-        <div class="relative z-10 flex items-center justify-center px-6">
-            <img src="img/header.svg" alt="Małwina & Michał – 26 czerwca 2026 – Ślub w Osadzie Dębowo"
-                class="w-full max-w-3xl drop-shadow-2xl">
-            <!-- object-contain makes sure your SVG is never distorted -->
-            <!-- max-w-5xl keeps it the same width as the rest of your content -->
+        <div id="countdown-container" class="bottom-element">
+            <div id="countdown">
+            <div><span id="days">00</span><small>Dni</small></div>
+            <span>:</span>
+            <div><span id="hours">00</span><small>Godzin</small></div>
+            <span>:</span>
+            <div><span id="minutes">00</span><small>Minut</small></div>
+            <span>:</span>
+            <div><span id="seconds">00</span><small>Sekund</small></div>
+            </div>
         </div>
-    </header>
+    </section>
 
-    <div class="mx-auto w-full py-8 relative z-10">
-        <!-- Main Content -->
-        <main class="space-y-12">
-            <!-- Ceremony Details -->
-            <section class="bg-invitation-beige/90 p-8">
-                <h2 class="text-3xl tracking-widest text-invitation-gold mb-6 text-center">CEREMONIA</h2>
-                <div class="gap-6 text-center">
-                    <div class="text-center">
-                        <p class="italic text-invitation-green">Zaraz na początku najpiękniejszego miesiąca - maja, gdy świat i natura budzą się do życia, a światło na nowo wygrywa z mrokiem, spotkamy się, by celebrować nasze małżeństwo. To także czas Beltane - starożytnego święta kwiatów, płodności i radości życia, gdy natura rozkwita, a ogień i taniec sprzyjają nowym początkom. W tę noc nad nami rozświetli się pełnia księżyca. Otoczeni zielenią i świeżym powietrzem, z dala od zgiełku, wymienimy obietnice, a potem zanurzymy się w świętowaniu, tańcząc na deskach i ciesząc się każdą chwilą. Jesteśmy przepełnieni radością, że będziemy mogli dzielić tę chwilę właśnie z Wami. Przynieście ze sobą radość i dobre wibracje - tej nocy świetujemy życie w pełni!</p>
-                    </div>
-                </div>
-            </section>
+    <section class="page two">
+        <div class="title-wrapper dark-brown-color top-element">
+          <span class="line1">Ceremonia</span>
+          <span class="line2">i Celebracja</span>
+        </div>
+        <div class="center-wrapper dark-brown-color uppercase">
+            Na samym progu najpiękniejszego miesiąca - maja, gdy natura budzi się do życia, a światło triumfuje nad mrokiem, spotkamy się, by uczcić nasze małżeństwo. To pora Beltane, pradawnego święta kwiatów, płodności i życiowej radości, kiedy przyroda rozkwita, a ogień i taniec zwiastują świeże początki. Tej nocy niebo rozjaśni pełnia kwiatowego księżyca. W otoczeniu bujnej zieleni, z dala od miejskiego hałasu, złożymy sobie obietnice, a potem zanurzymy się w świętowaniu, tańcząc na deskach i ciesząc się każdą chwilą. Ogromnie cieszymy się, że podzielimy ten moment właśnie z wami. zabierzcie ze sobą dobre wibracje - tej nocy celebrujemy życie w pełni!
+        </div>
+    </section>
 
-            <!-- Schedule -->
-            <section class="bg-invitation-green p-0">
-                <div class="flex flex-col md:flex-row gap-0">
-                    <div class="w-full md:w-1/2 bg-cover bg-bottom relative bg-[url(img/bg2.jpg)]">
+    <section class="page three">
+        <div class="title-wrapper">
+          <span class="line1">Harmonogram</span>
+          <span class="line2">Dnia Ślubu</span>
+        </div>
+        <div class="center-wrapper">
+          <img src="img/harmonogram.svg" class="img harmonogram" />
+        </div>
+    </section>
 
-                        <!-- Dark overlay so gold text pops -->
-                        <div class="absolute inset-0 bg-black/40"></div>
+    <section class="page four">
+      <div class="wrapper-v">
+          <div class="title-wrapper dark-brown-color top-element">
+            <span class="line1">Gdzie</span>
+            <span class="line2">Śpimy</span>
+          </div>
+          <div class="chapter dark-brown-color uppercase">
+            <p>Dla naszych gości zapewniamy nocleg w nastrojowych domkach Osady Dębowo, położonych tuż obok miejsca wesela. Zakwaterowanie dostępne jest od godziny 15:00 do 11:30 dnia następnego. W niedzielę W godzinach 9:00–12:30 czekać będzie na Was śniadanie.</p>
+          </div>
+      </div>
+      <div class="wrapper-v">
+          <div class="title-wrapper title2 dark-brown-color top-element">
+            <span class="line1">Dress</span>
+            <span class="line2">Code</span>
+          </div>
+          <div class="chapter dark-brown-color uppercase">
+            <p>
+              ZAŁÓŻCIE SWOJE NAJPIĘKNIEJSZE KREACJE! JEŚLI W WASZEJ SZAFIE (LUB W WYOBRAŹNI) CZEKA COŚ, CO ZAWSZE CHCIELIŚCIE WŁOŻYĆ, ALE POWSTRZYMYWAŁA WAS MYŚL „CO LUDZIE POWIEDZĄ?” – TO JEST TEN MOMENT!
+            <p>PRZYJDŹCIE UBRANI DOKŁADNIE TAK, JAK SOBIE WYMARZYCIE.</p>
+            <p>PAMIĘTAJCIE PROSZĘ, ŻE CEREMONIA ODBĘDZIE SIĘ NA ŚWIEŻYM POWIETRZU, NA NIEUTWARDZONYM PODŁOŻU. SZPILKI I TRAWA NIE ZAWSZE TWORZĄ ZGRANĄ PARĘ :)</p>
+            </p>
+          </div>
+      </div>
+    </section>
 
-                        <!-- Title centered on the photo -->
-                        <div class="relative z-10 flex items-center justify-center h-full p-8">
-                            <h2 class="text-3xl tracking-widest text-invitation-gold text-center drop-shadow-2xl">
-                                HARMONOGRAM DNIA
-                            </h2>
-                        </div>
-                    </div>
+    <section class="page five">
+      <div class="wrapper-h">
+        <div class="chapter top-element uppercase">
+          <p>Będziemy zachwyceni, jeśli zechcecie świętować razem z nami!</p>
+          <p>Prosimy, dajcie znać, czy dołączycie do naszego wyjątkowego dnia.</p>
+          <p>Nie zapomnijcie poinformować nas o chęci skorzystania z noclegu i preferencjach żywieniowych.</p>
+        </div>
+        <div class="center-wrapper">
+          <img src="img/frame.svg" class="img frame-img box-shadow" />
+          <a href="mailto:malwina.michal@pm.me"><img src="img/envelope.jpg" class="img envelope-img box-shadow"/></a>
+        </div>
+      </div>
+    </section>
 
-                    <div class="w-full md:w-1/2 p-8">
-                        <ul class="space-y-4">
-                            <li class="flex justify-between p-4 bg-invitation-beige/50 rounded-lg">
-                                <span>15:30</span>
-                                <span>Powitanie gości</span>
-                            </li>
-                            <li class="flex justify-between p-4 bg-invitation-beige/50 rounded-lg">
-                                <span>17:00</span>
-                                <span>Ceremonia zaślubin</span>
-                            </li>
-                            <li class="flex justify-between p-4 bg-invitation-beige/50 rounded-lg">
-                                <span>19:00</span>
-                                <span>Wesele i uczta</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+    <section class="page six">
+      <div class="wrapper-v">
+          <div class="title-wrapper dark-brown-color">
+            <span class="line1">Osada</span>
+            <span class="line2">Dębowo</span>
+          </div>
+          <div class="chapter uppercase dark-brown-color">
+            <p>Cudowne miejsce pośrodku niczego — przestrzeń, w której zakochaliśmy się od pierwszego wejrzenia i po której obejrzeniu nie chcieliśmy już szukać dalej. Mamy nadzieję, że wy również poczujecie jego wyjątkowy klimat.</p>
+          </div>
+          <iframe class="gmap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4050.900905401577!2d20.77303191345673!3d53.91810977234596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e26f6b0cd16419%3A0x1ce881b582cdeb91!2sOsada%20D%C4%99bowo!5e1!3m2!1spl!2spl!4v1763990282108!5m2!1spl!2spl" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
 
-            <!-- Location with Map -->
-            <section class="bg-invitation-beige rounded-lg p-8">
-                <h2 class="text-3xl tracking-widest text-invitation-gold mb-6 text-center">MIEJSCE</h2>
-                <p class="text-center mb-6">Osada Dębowo, Jeziorany, Polska</p>
-                <!-- Google Maps Embed for Osada Dębowo -->
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.5853013560804!2d20.773037277323!3d53.9181129317884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e26f6b0cd16419%3A0x1ce881b582cdeb91!2sOsada%20D%C4%99bowo!5e1!3m2!1sen!2suk!4v1762426367017!5m2!1sen!2suk"
-                    width="100%" height="400" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </section>
+    <section class="page seven">
+      <div class="wrapper-v">
+        <div class="title-wrapper">
+          <span class="line1">FAQ</span>
+        </div>
+        <div class="chapter uppercase">
+          <p>Jaki jest adres osady?</p>
+          <p>Kiersztanowo 31, 11-320 Jeziorany</p>
+        </div>
+        <div class="chapter uppercase">
+          <p>O której być na miejscu?</p>
+          <p>ZAKWATEROWANIE BĘDZIE MOŻLIWE OD GODZINY 15:00, w niektórych przypadkach nawet wcześniej. Rekomendujemy przyjazd już od godziny 14:00 — dzięki temu unikniecie kolejek w recepcji i będziecie mieli więcej czasu na spokojne przygotowania.</p>
+        </div>
+        <div class="chapter uppercase">
+          <p>Czy będzie gdzie zaparkować?</p>
+          <p>Tak, na miejscu dostępny jest duży, wygodny parking, który pomieści wszystkich gości bez problemu.</p>
+        </div>
+        <div class="chapter uppercase">
+          <p>Czy na weselu będzie open bar?</p>
+          <p>Tak, zapewniamy open bar z szerokim wyborem napojów, abyście mogli swobodnie cieszyć się świętowaniem!</p>
+        </div>
+      </div>
+    </section>
+  </div>
 
-            <!-- Practical Info -->
-            <section class="bg-invitation-green p-0">
-                <div class="flex flex-col md:flex-row gap-0">
-                    <div class="w-full md:w-1/2 bg-cover bg-center relative bg-[url(img/bg2.jpg)]">
 
-                        <!-- Dark overlay so gold text pops -->
-                        <div class="absolute inset-0 bg-black/60"></div>
-
-                        <!-- Title centered on the photo -->
-                        <div class="relative z-10 flex items-center justify-center h-full p-8">
-                            <h2 class="text-3xl tracking-widest text-invitation-gold text-center drop-shadow-2xl">
-                                INFORMACJE PRAKTYCZNE
-                            </h2>
-                        </div>
-                    </div>
-
-                    <div class="w-full md:w-1/2 p-8">
-                        <div class="lg:grid lg:grid-cols-2 xl:grid-cols-3 bg-invitation-beige/50 rounded-lg py-2 text-center">
-                            <div class="m-4">
-                                <div class="text-invitation-gold">DRESSCODE</div>
-                                <div>Wasze najpiękniejsze stroje — z myślą o naturze i miękkiej trawie pod stopami</div>
-                            </div>
-                            <div class="m-4">
-                                <div class="text-invitation-gold">NIEBO W DNIU ŚLUBU</div>
-                                <div>Pełnia księżyca</div>
-                            </div>
-                            <div class="m-4">
-                                <div class="text-invitation-gold">DOJAZD</div>
-                                <div>Parking dostępny na miejscu</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- RSVP -->
-            <section class="bg-invitation-beige/90 rounded-lg p-8 text-center">
-                <h2 class="text-3xl tracking-widest text-invitation-gold mb-6 text-center">POTWIERDZENIE UCZESTNICTWA
-                </h2>
-                <p class="mb-8">Nie możemy się doczekać Waszej obecności! Prosimy o RSVP do 2 marca 2026.</p>
-                <a href="mailto:malwina.michal@pm.me?subject=RSVP"
-                    class="text-white px-8 py-3 rounded-full font-semibold bg-invitation-green transition">malwina.michal@pm.me</a>
-            </section>
-        </main>
-
-        <!-- Footer -->
-        <footer class="text-center mt-12 pt-8 border-t border-invitation-gold/30">
-            <p class="text-invitation-gold">&copy; 2026 Malwina & Michał.</p>
-        </footer>
-    </div>
 </body>
-
 </html>

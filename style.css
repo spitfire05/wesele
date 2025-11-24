@@ -1,0 +1,371 @@
+html {
+  scroll-behavior: smooth;           /* smooth when clicking anchor links (optional) */
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  max-width: 100%;
+  font-family: "Forum", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  overflow: hidden;                  /* disable normal page scroll */
+  letter-spacing: 0.15em;
+  background: #f8f6f6;
+}
+
+/* The scrolling container */
+.container {
+  height: 100dvh;
+  max-height: 100dvh;
+  overflow-y: scroll;                /* enable vertical scrolling inside */
+  overflow-x: hidden;                /* together with max-widht: 100% this disables horizontal scroll for good,
+                                        very annoying on mobile w/o it */
+  scroll-snap-type: y proximity;
+  -webkit-overflow-scrolling: touch; /* smooth momentum on iOS */
+}
+
+/* Each full-screen section */
+.page {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;          /* snap to the top of each section */
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.one   { 
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/bg-fairy.jpg') center/cover no-repeat
+}
+.two   { 
+  font-size: clamp(1rem, 0.5556rem + 1.7778vw, 5rem);
+ }
+.three { 
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/bg2.jpg') center/cover no-repeat
+}
+.four  {
+  font-size: clamp(1rem, 0.5556rem + 1.7778vw, 5rem);
+}
+.five {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/bg-door.jpg') center/cover no-repeat
+}
+.seven {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/bg-faq.jpg') center/cover no-repeat
+}
+
+h1 {
+  font-size: 4rem;
+  margin: 0 0 1rem 0;
+}
+
+p {
+  font-size: 1.5rem;
+  opacity: 0.9;
+}
+
+/* Optional: hide scrollbar but keep functionality */
+.container::-webkit-scrollbar {
+  display: none;
+}
+.container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.dark-brown-color {
+  color: #7d7539;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.fancy-text {
+  font-family: "Fleur De Leah", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.img {
+  max-width: 95vw;
+}
+
+.big-img-h {
+  width: 75vw;
+  height: auto;
+  max-height: 75dvh;
+}
+
+.harmonogram {
+  height: 70dvh;
+  margin-top: -2rem;
+}
+
+.chapter {
+  text-align: left;
+  margin-left: auto;
+  margin-right: 2rem;
+  max-width: 75vw;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.six .chapter {
+  max-width: 50vw;
+}
+
+.seven .chapter {
+  margin-left: 1rem;
+  margin-right: auto;
+  max-width: 50vw;
+}
+
+.seven .title-wrapper {
+  margin-left: 1rem;
+  margin-right: auto;
+}
+
+.seven .line1 {
+  transform: none;
+}
+
+.wrapper-h {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 100vw;
+
+}
+
+.wrapper-v {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 100vw;
+}
+
+.five .chapter {
+  margin-left: 1rem;
+  margin-right: auto;
+  max-width: 40vw;
+}
+
+.gmap {
+  max-width: 95vw;
+  max-height: 50dvh;
+}
+
+.five p {
+  font-size: 3rem;
+}
+
+.five .frame-img,
+.five .envelope-img {
+  width: 350px;
+}
+
+.five .frame-img {
+  margin-bottom: 2rem;
+}
+
+.box-shadow {
+  -webkit-box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 1);
+  box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 1);
+}
+
+.chapter > p {
+  margin: 0.5rem;
+}
+
+.center-wrapper {
+  flex: 1;                     /* takes all available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;    /* vertical center */
+  align-items: center;         /* horizontal center */
+  text-align: center;
+  margin: 2rem;
+}
+
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;                     /* space between the two lines */
+  padding: 2rem;
+  margin-top: 1rem;;
+}
+
+.three .title-wrapper {
+  max-height: 30dvh;
+}
+
+.four .title-wrapper {
+  margin-left: 0;
+  margin-right: auto;
+  align-items: flex-start;
+  padding-left: 2vw;
+  text-align: left;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+}
+
+.four .top-element {
+  padding-top: 0;
+}
+
+.line1 {
+  font-size: clamp(3rem, 2.7778rem + 0.8889vw, 5rem);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0;
+  transform: translateX(-20%);
+}
+
+.four .line1 {
+  transform: translateX(0);
+}
+
+.line2 {
+  font-family: 'Fleur De Leah', cursive;
+  letter-spacing: normal;
+  font-size: clamp(5rem, 4.6667rem + 1.3333vw, 8rem);
+  font-weight: 400;
+  margin-top: -2rem;
+  transform: translateX(20%);
+}
+
+.four .line2 {
+  transform: translateX(50%);
+}
+
+.top-element {
+  margin-bottom: auto;
+  padding-top: 2rem;
+}
+
+.bottom-element {
+  margin-top: auto;
+  padding-bottom: 2rem;
+  margin-bottom: -2rem;             /* Corresponding to .page padding */
+}
+
+.bg-dark-40 {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#countdown-container {
+  text-align: center;
+  background: #b2b99e7e;
+  min-width: 100vw;
+  display: none;
+}
+
+#countdown {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem 0;
+  flex-wrap: wrap;
+}
+
+#countdown span {
+  display: block;
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+#countdown small {
+  font-size: 1rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+  .two {
+    font-size: 0.8rem;
+  }
+
+  .four p {
+    font-size: 0.8rem;
+  }
+
+  .five .chapter {
+    max-width: 50vw;
+  }
+
+  .five p {
+    font-size: 1.5rem;
+  }
+
+  .six p {
+    font-size: 0.8rem;
+  }
+
+  .seven p {
+    font-size: 0.8rem;
+  }
+
+  .seven .chapter {
+    max-width: 75vw;
+  }
+
+  .five .frame-img,
+  .five .envelope-img {
+    width: 120px;
+  }
+
+  .center-wrapper {
+    margin-top: -2rem;
+  }
+
+  .line1 {
+    font-size: 6vw;
+  }
+
+  .line2 {
+    font-size: 14vw;
+  }
+
+  .img {
+    max-width: 110vw;
+  }
+
+  .big-img-h {
+    width: 99vw;
+  }
+
+  #countdown {
+    gap: 1rem;
+  }
+
+  #countdown span {
+    font-size: 2rem;
+  }
+
+  #countdown small {
+    font-size: 0.5rem;
+  }
+}
+
+@media (min-width: 2000px) {
+  .five p {
+    font-size: 4rem;
+  }
+}
