@@ -112,6 +112,12 @@ p {
   margin-right: 2rem;
   max-width: 75vw;
   font-size: 1.1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.chapter > p {
+  margin: 0.5rem;
 }
 
 .center-wrapper {
